@@ -1,0 +1,24 @@
+{
+  "name": "sui",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "hunter"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./dist/lib",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.6",
+     "modernizr": "~2.8.1"
+  },
+  "dependencies": {}
+}
