@@ -51,9 +51,9 @@ gulp.task('server', ['sass'],function() {
 		gulp.watch('src/*.html',function() {
 			browserSync.reload();
 		});
-		gulp.watch('src/**/*.js', function() {
+		gulp.watch('src/**/*.js', ['browserify',function() {
 			browserSync.reload();
-		});
+		}]);
 		gulp.watch('src/images/*', function() {
 			browserSync.reload();
 		})
@@ -76,6 +76,16 @@ gulp.task('sass', function() {
 	})
 
 });
+
+
+//browserify
+
+gulp.task('browserify',function(){
+
+
+
+})
+
 
 
 
@@ -118,6 +128,8 @@ gulp.task('min-png', function(){
 	.pipe(rev.manifest('png.json'))
 	.pipe(gulp.dest('rev/'))
 })
+
+
 //视频文件存放于images/
 gulp.task('copy-media', function(){
 	return gulp.src('src/images/**/*.+(gif|mp3|mp4)')

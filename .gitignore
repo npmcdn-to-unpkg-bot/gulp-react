@@ -1,7 +1,7 @@
 .idea/
 node_modules/
-.sass-cache
-dist
-rev
+.sass-cache/
+dist/
+rev/
 
 
