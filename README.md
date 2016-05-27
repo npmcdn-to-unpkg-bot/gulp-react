@@ -2,8 +2,9 @@
 ### PC前端基础类库
 1. 版本控制 
 2. 检查JS
-3. 图片合并
-4. 压缩CSS
-5. 压缩JS
+3. 图片压缩
+4. CSS压缩
+5. JS压缩
 6. 编译SASS
-7. LiveLoaded 
+7. browserSync
+8.browserify+watchify实现js模块化和加速编译 
