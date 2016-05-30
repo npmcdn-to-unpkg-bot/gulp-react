@@ -92,12 +92,13 @@ var buffer = require('vinyl-buffer');
 var gutil = require('gulp-util'); 
 var sourcemaps = require('gulp-sourcemaps');
 var assign = require('lodash.assign'); 
+var plumber     = require('gulp-plumber');
 
 
 // 在这里添加自定义 browserify 选项
 var customOpts = {
   entries: [devConfig.browserifyEntry],
-  debug: true
+  debug: false
 };
 
 var opts = assign({}, watchify.args, customOpts);
@@ -114,6 +115,7 @@ function bundle() {
   return b.bundle()
     // 如果有错误发生，记录这些错误
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))
+    .pipe(plumber())
     .pipe(source('bundle.js'))
     // 可选项，如果你不需要缓存文件内容，就删除
     .pipe(buffer())

@@ -8,10 +8,26 @@
   },
   "author": "",
   "license": "ISC",
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "jquery-smartMenu": "./src/lib/jquery-smartMenu/js/jquery-smartMenu.js"
+  },
+  "browserify-shim": {
+    "jquery-smartMenu": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    }
+  },
   "devDependencies": {
     "angular": "^1.5.5",
     "browser-sync": "^2.10.0",
     "browserify": "^13.0.1",
+    "browserify-shim": "^3.8.12",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
@@ -20,7 +36,7 @@
     "gulp-devserver": "^0.6.1",
     "gulp-imagemin": "^3.0.1",
     "gulp-minify-css": "^1.2.1",
-    "gulp-plumber": "^1.0.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-rev": "^7.0.0",
@@ -33,6 +49,7 @@
     "gulp-util": "^3.0.7",
     "imagemin-jpeg-recompress": "^5.0.0",
     "imagemin-pngquant": "^5.0.0",
+    "jquery": "^2.2.4",
     "lodash": "^4.13.1",
     "lodash.assign": "^4.0.9",
     "proxy-middleware": "^0.15.0",

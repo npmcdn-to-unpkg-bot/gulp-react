@@ -7,4 +7,4 @@
 5. JS压缩
 6. 编译SASS
 7. browserSync
-8.browserify+watchify实现js模块化和加速编译 
+8. browserify+watchify实现js模块化和加速编译 
