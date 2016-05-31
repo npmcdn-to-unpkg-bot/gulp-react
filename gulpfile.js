@@ -94,7 +94,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var assign = require('lodash.assign'); 
 var plumber     = require('gulp-plumber');
 var babelify = require('babelify');
-
+var shim = require('browserify-shim');
 // 在这里添加自定义 browserify 选项
 var customOpts = {
   entries: [devConfig.browserifyEntry],
@@ -116,6 +116,7 @@ function bundle() {
     .transform(babelify, {
 			presets: ['es2015', 'react']
 		})
+    .transform(shim)
     .bundle()
     // 如果有错误发生，记录这些错误
     .on('error', gutil.log.bind(gutil, 'Browserify Error'))   

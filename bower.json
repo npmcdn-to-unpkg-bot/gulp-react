@@ -18,7 +18,9 @@
   ],
   "devDependencies": {
     "bootstrap-sass": "^3.3.6",
-     "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^15.1.0"
+  }
 }

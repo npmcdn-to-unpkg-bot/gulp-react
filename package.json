@@ -21,7 +21,9 @@
       "depends": [
         "jquery:jQuery"
       ]
-    }
+    },
+    "react": "global:React",
+    "react-dom": "global:ReactDOM"
   },
   "devDependencies": {
     "angular": "^1.5.5",
@@ -57,8 +59,6 @@
     "lodash": "^4.13.1",
     "lodash.assign": "^4.0.9",
     "proxy-middleware": "^0.15.0",
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "vue": "^1.0.24",
