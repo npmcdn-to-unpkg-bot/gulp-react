@@ -6,8 +6,11 @@
 	<meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/antd/dist/antd.css">    
     <link rel="stylesheet" type="text/css" href="styles/main.css">    
+    
     <script src="lib/modernizr/modernizr.js"></script>
+
 </head>
 <body>
 	
@@ -15,5 +18,15 @@
 	<button class="btn btn-info">但是</button>
 
 
+
+<div id="app">
+  <ul>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ul>
+</div>
+<div id="example"> </div>
+<script type="text/javascript" src="scripts/bundle.js"></script>
 </body>
 </html>

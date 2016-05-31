@@ -6,9 +6,6 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
-@import url(../lib/jquery-powerFloat/css/common.css);
-@import url(../lib/jquery-powerFloat/css/powerFloat.css);
-@import url(../lib/jquery-smartMenu/css/smartMenu.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

@@ -93,7 +93,7 @@ var gutil = require('gulp-util');
 var sourcemaps = require('gulp-sourcemaps');
 var assign = require('lodash.assign'); 
 var plumber     = require('gulp-plumber');
-
+var babelify = require('babelify');
 
 // 在这里添加自定义 browserify 选项
 var customOpts = {
@@ -112,9 +112,13 @@ b.on('update', bundle);              // 当任何依赖发生改变的时候，�
 b.on('log', gutil.log);              // 输出编译日志到终端
 
 function bundle() {
-  return b.bundle()
+  return b
+    .transform(babelify, {
+			presets: ['es2015', 'react']
+		})
+    .bundle()
     // 如果有错误发生，记录这些错误
-    .on('error', gutil.log.bind(gutil, 'Browserify Error'))
+    .on('error', gutil.log.bind(gutil, 'Browserify Error'))   
     .pipe(plumber())
     .pipe(source('bundle.js'))
     // 可选项，如果你不需要缓存文件内容，就删除
