@@ -8,3 +8,4 @@
 6. 编译SASS
 7. browserSync
 8. browserify+watchify实现js模块化和加速编译 
+9. react和antd。
